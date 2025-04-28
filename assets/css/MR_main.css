@@ -90,13 +90,12 @@ img {width: 100%;}
 .dropdown-item{
     padding: 0;
 }
-.dropdown-item img{
+.dropdown-langBox .dropdown-item img{
     width: 36px;
     height: auto;
     border: 4px solid transparent;
     border-radius: 50%;
 }
-
 
 /*--- main 主畫面 ---*/
 .main {
@@ -133,8 +132,6 @@ img {width: 100%;}
     max-width: 120px;
     display: block;
 }
-
-
 /*--- Bet Area ---*/
 .bottom{
     position: fixed;
@@ -144,7 +141,11 @@ img {width: 100%;}
 }
 .betareaBox{
     background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
-    z-index: 2;
+}
+.betareaBox::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .betarea-header{
     border-bottom: 1px solid;
@@ -388,27 +389,73 @@ img {width: 100%;}
                 radial-gradient(48.46% 60.95% at 51.54% 96.43%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 85%);
 }
 /*--- Menu dropup ---*/
-.menudropupBox{
+.menudropleftBox{
     text-align: end;
     padding: 5px;
 }
-.btn-menudropup{
+.btn-menudropleft{
     background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
     border: 1px solid rgba(153, 153, 153, 0.5);
     width: 32px;
     height: 32px;
+    position: relative;
 }
-.menudropupBox.dropup .dropdown-toggle::after{
+.btn-menudropleft img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: auto;
+}
+.btn-menudropleft:hover, .btn-menudropleft:active{
+    border: 1px solid rgba(153, 153, 153, 1);
+}
+.menudropleftBox.dropstart .dropdown-toggle::before{
     display: none;
 }
+.menudropleftBox .dropdown-menu{
+    min-width: unset;
+    background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
+    border: 1px solid rgba(153, 153, 153, 0.5);
+    height: 32px;
+    padding: 0;
+}
+.menudropleftBox .dropdown-menu.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menudropleftBox .dropdown-menu img{
+    width: 24px;
+    height: auto;
+}
+.menudropleftBox .dropdown-item{
+    width: unset;
+    margin: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
 
 
 
-
-
+@media (orientation: landscape) {
+    .betarea-horizontal-left,
+    .betarea-horizontal-right {
+        width: 49%;
+    }
+    .betarea-horizontal-left {
+        float: left; /* 將左邊區塊推到左邊 */
+    }
+    .betarea-horizontal-right {
+        float: right; /* 將右邊區塊推到右邊 */
+    }
+}
 /*--- Margin ---*/
 .m-00 {margin: 0;}
 .mt-05 {margin-top: 5px;}
