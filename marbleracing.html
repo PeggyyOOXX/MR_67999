@@ -31,7 +31,7 @@
                     </div>
                     <div class="refreshbalanceBox">
                         <button class="btn btn-refreshbalance">
-                            <img src="./assets/img/icon/refresh.png">
+                            <img src="./assets/img/MarbleRace/icon/refresh.png">
                         </button>
                     </div>
                     <div class="userimgBox">
@@ -74,7 +74,11 @@
                         <li><a class="dropdown-item" href="#"><img src="./assets/img/MarbleRace/icon/bethistory.png"></a></li>
                         <li><a class="dropdown-item" href="#"><img src="./assets/img/MarbleRace/icon/record.png"></a></li>
                         <li><a class="dropdown-item" href="#"><img src="./assets/img/MarbleRace/icon/rotate.png"></a></li>
-                        <li><a class="dropdown-item" href="#"><img src="./assets/img/MarbleRace/icon/setting.png"></a></li>
+                        <li>
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#setting_Modal">
+                                <img src="./assets/img/MarbleRace/icon/setting.png">
+                            </button>
+                        </li>
                     </ul>
                 </div>
                 <!-- Bet Area -->
@@ -574,8 +578,24 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+
+
+        <div class="modal fade" id="setting_Modal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./assets/img/MarbleRace/icon/setting.png">
+                        <span>Setting</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Setting</p>
+                    </div>
+                </div>
+            </div>
+          </div>
 
     </body>
 </html>
