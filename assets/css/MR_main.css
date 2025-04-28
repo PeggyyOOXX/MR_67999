@@ -205,10 +205,7 @@ img {width: 100%;}
     font-weight: 800;
     color: #000;
 }
-
-
-
-/* Doubleside Bet */
+/*--- Doubleside Bet ---*/
 .betarea-doublesideBox {
     display: flex;
     flex-wrap: nowrap;
@@ -267,7 +264,7 @@ img {width: 100%;}
     height: auto;
     z-index: 9;
 }
-/* Amount Setting */
+/*--- Amount Setting ---*/
 .betarea-amountsettingBox{
     display: flex;
     flex-wrap: nowrap;
@@ -308,7 +305,7 @@ img {width: 100%;}
     border: 1px solid;
     border-color: #33ff41!important;
 }
-/* Enter Bet */
+/*--- Enter Bet ---*/
 .betarea-finalbetBox{
     display: flex;
     flex-wrap: nowrap;
@@ -335,8 +332,7 @@ img {width: 100%;}
 .btn-confirm{
     flex: 0 0 40%;
 }
-
-/* Map way */
+/*--- Map way ---*/
 .mapway-header{
     border-top: 1px solid #ddd1;
 }
@@ -391,8 +387,20 @@ img {width: 100%;}
     background: linear-gradient(180deg, #FF006F 31.25%, #66002D 100%),
                 radial-gradient(48.46% 60.95% at 51.54% 96.43%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 85%);
 }
-
-
+/*--- Menu dropup ---*/
+.menudropupBox{
+    text-align: end;
+    padding: 5px;
+}
+.btn-menudropup{
+    background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
+    border: 1px solid rgba(153, 153, 153, 0.5);
+    width: 32px;
+    height: 32px;
+}
+.menudropupBox.dropup .dropdown-toggle::after{
+    display: none;
+}
 
 
 
