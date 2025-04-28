@@ -16,7 +16,12 @@ hr {
     opacity: unset;
 }
 img {width: 100%;}
+.nav-link:focus, .nav-link:hover{
+    color: unset;
+}
 
+
+/*--- 限制畫面寬高 ---*/
 .main{flex: 1;}
 .wrapper {
     display: flex;
@@ -157,12 +162,52 @@ img {width: 100%;}
 }
 .betarea-ballBox .btn-ball{
     flex: 1;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     border: none;
+    position: relative;
+    display: inline-block;
 }
+.btn-ball.active{
+    position: relative;
+    top: -10px;
+}
+.btn-ball .chipimg{
+    position: relative;
+    bottom: -10px;
+    right: 25px;
+}
+.btn-ball .betchipBox {
+    position: absolute;
+    bottom: -15px;
+    right: -10px;
+    width: 36px;
+    height: auto;
+    z-index: 9;
+}
+.chipimgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.chip-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.chip-amount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: 800;
+    color: #000;
+}
+
+
+
 /* Doubleside Bet */
 .betarea-doublesideBox {
     display: flex;
@@ -171,10 +216,11 @@ img {width: 100%;}
 }
 .betarea-doublesideBox .btn-doubleside-one, .betarea-doublesideBox .btn-doubleside-two{
     flex: 1;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    position: relative;
+    display: inline-block;
 }
 .btn-doubleside-one{
     background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
@@ -212,6 +258,14 @@ img {width: 100%;}
 }
 .bet-price{
     color: #fff;
+}
+.btn-doubleside-one .betchipBox, .btn-doubleside-two .betchipBox {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 36px;
+    height: auto;
+    z-index: 9;
 }
 /* Amount Setting */
 .betarea-amountsettingBox{
@@ -266,7 +320,6 @@ img {width: 100%;}
     background: linear-gradient(282.29deg, rgba(79, 85, 131, 0.5) 0%, #292E4E 39.56%, #1B1F3A 100%);
     border: 1px solid #4F5583;
     border-radius: 4px;
-    height: 45px;
 }
 .btn-finalbet img{
     width: 24px;
@@ -284,6 +337,9 @@ img {width: 100%;}
 }
 
 /* Map way */
+.mapway-header{
+    border-top: 1px solid #ddd1;
+}
 .mapway-header img{
     width: 24px;
     height: auto;
@@ -292,7 +348,7 @@ img {width: 100%;}
     width: 70%;
 }
 .mapway-tableBox{
-    border: 1px solid rgba(238, 238, 238, 0.5);
+    border: 1px solid rgba(238, 238, 238, .3);
     border-radius: 6px;
     padding: 4px;
     overflow-x: auto;
@@ -300,7 +356,7 @@ img {width: 100%;}
 }
 .mapway-table{
     table-layout: fixed;
-    width: 500px;
+    width: 300px;
     height: 90px;
     font-size: 10px;
 }
@@ -324,9 +380,17 @@ img {width: 100%;}
     border: 1px solid rgba(252, 118, 121, 1);
     border-radius: 50%;
 }
-
-
-
+.btn-mapwaytable{
+    background: linear-gradient(282.29deg, rgba(79, 85, 131, 0.5) 0%, #292E4E 39.56%, #1B1F3A 100%);
+    border: 1px solid #4F5583;
+    border-radius: 4px;
+    color: #fff;
+    margin: 3px 0;
+}
+.btn-mapwaytable.active{
+    background: linear-gradient(180deg, #FF006F 31.25%, #66002D 100%),
+                radial-gradient(48.46% 60.95% at 51.54% 96.43%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 85%);
+}
 
 
 
