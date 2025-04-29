@@ -438,22 +438,218 @@ img {width: 100%;}
     align-items: center;
     justify-content: center;
 }
+.menudropleftBox .dropdown-item.active, .menudropleftBox .dropdown-item:active{
+    background: linear-gradient(180deg, #FF006F 31.25%, #66002D 100%),
+    radial-gradient(48.46% 60.95% at 51.54% 96.43%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 85%);
+}
+/*--- modal ---*/
+.modal-backdrop.show{
+    opacity: 1;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);;
+    color: #fff;
+    opacity: 1;
+}
+.modal-content{
+    background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
+}
+.modal-header img{
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+.modal-header{
+    padding: 10px;
+    margin: 0 10px;
+    border-bottom: 1px solid rgba(188, 190, 196, 0.4);
+}
+.modal-body{
+    padding: 5px 10px 10px 10px;
+}
+.btn-modaltab{
+    background: linear-gradient(282.29deg, rgba(79, 85, 131, 0.5) 0%, #292E4E 39.56%, #1B1F3A 100%);
+    border: 1px solid #4F5583;
+    border-radius: 4px;
+    color: #fff;
+    margin: 3px 0;
+    width: 49%;
+}
+.btn-modaltab.active{
+    background: linear-gradient(180deg, #FF006F 31.25%, #66002D 100%),
+                radial-gradient(48.46% 60.95% at 51.54% 96.43%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 85%);
+}
+/* bet history */
+.bethistory-tabcontent{
+    max-height: 500px;
+    overflow: auto;
+}
+.currentbet-table, .todaybet-table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.currentbet-table th,
+.currentbet-table td {
+    width: 33%;
+    word-break: break-word;
+    padding: 3px;
+}
+.todaybet-table th,
+.todaybet-table td {
+    width: 25%;
+    word-break: break-word;
+    padding: 3px;
+}
+.currentbet-table thead, .todaybet-table thead {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(282.29deg, #4f5583 0%, #292E4E 50%, #4f5583 100%);
+    border-radius: 4px;
+}
+.currentbet-table th, .todaybet-table th{
+    padding: 5px 0;
+}
+.currentbet-table td, .todaybet-table td{
+    border-bottom: 1px solid rgba(188, 190, 196, 0.1);
+}
+.currentbet-table .ballimg, .todaybet-table .ballimg{
+    width: 24px;
+    height: auto;
+}
+/* record */
+.record-tabcontent{
+    max-height: 500px;
+    overflow: auto;
+}
+.history-table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.history-table th:nth-child(1),
+.history-table td:nth-child(1){
+    width: 20%;
+    word-break: break-word;
+    font-size: 14px;
+}
+.history-table thead {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(282.29deg, #4f5583 0%, #292E4E 50%, #4f5583 100%);
+    border-radius: 4px;
+}
+.history-table th{
+    padding: 5px;
+}
+.history-table td{
+    border-bottom: 1px solid rgba(188, 190, 196, 0.1);
+    padding: 5px 0;
+}
+.historyballBox{
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+.historyballBox .ballimg {
+    flex: 1 1 0;
+    width: 9%;
+    height: auto;
+}
 
 
 
 
 
 
+
+
+.switch-item{
+    padding: 8px;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 1px solid #fff1;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(94.82deg, #4F5583 44.46%, #292E4E 76.74%, #1B1F3A 96.11%);
+    border: 1px solid rgba(153, 153, 153, 0.5);
+    border-radius: 30px;
+    transition: .3s;
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background: linear-gradient(0deg, rgba(188, 190, 196, 0.4), rgba(188, 190, 196, 0.4));
+    border: 1px solid rgba(153, 153, 153, 0.5);
+    border-radius: 50%;
+    transition: .3s;
+}
+.switch input:checked + .slider {
+    background: linear-gradient(180deg, #33FF41 0%, #156B1B 100%);
+    border: 1px solid #156B1B;
+}
+.switch input:checked + .slider::before {
+    transform: translateX(20px);
+    background: linear-gradient(180deg, #33FF41 1.69%, #24B52E 100%);
+    border: 1px solid #24B52E;
+    box-shadow: 0 2px 5px #333;
+}
+
+
+
+
+
+
+
+
+
+.redtext{
+    color: rgba(252, 118, 121, 1);
+    font-weight: 700;
+}
+.bluetext{
+    color: rgba(81, 147, 255, 1);
+    font-weight: 700;
+}
 @media (orientation: landscape) {
     .betarea-horizontal-left,
     .betarea-horizontal-right {
         width: 49%;
     }
     .betarea-horizontal-left {
-        float: left; /* 將左邊區塊推到左邊 */
+        float: left;   /* 左區塊浮動 */
     }
     .betarea-horizontal-right {
-        float: right; /* 將右邊區塊推到右邊 */
+        float: right;   /* 右區塊浮動 */
+    }
+    .bethistory-tabcontent{
+        max-height: 180px;
+    }
+    .record-tabcontent{
+        max-height: 180px;
     }
 }
 /*--- Margin ---*/
