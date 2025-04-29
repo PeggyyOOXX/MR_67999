@@ -70,7 +70,11 @@
                         <img src="./assets/img/MarbleRace/icon/menu.png">
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><img src="./assets/img/MarbleRace/icon/mapway.png"></a></li>
+                        <li>
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="">
+                                <img src="./assets/img/MarbleRace/icon/mapway.png">
+                            </button>
+                        </li>
                         <li>
                             <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#bethistory_Modal">
                                 <img src="./assets/img/MarbleRace/icon/bethistory.png">
@@ -81,7 +85,11 @@
                                 <img src="./assets/img/MarbleRace/icon/record.png">
                             </button>
                         </li>
-                        <li><a class="dropdown-item" href="#"><img src="./assets/img/MarbleRace/icon/rotate.png"></a></li>
+                        <li>
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="">
+                                <img src="./assets/img/MarbleRace/icon/rotate.png">
+                            </button>
+                        </li>
                         <li>
                             <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#setting_Modal">
                                 <img src="./assets/img/MarbleRace/icon/setting.png">
@@ -251,7 +259,7 @@
                                 <button class="btn">
                                     <img src="./assets/img/MarbleRace/icon/minus.png">
                                 </button>
-                                <span class="betamount">100</span>
+                                <span class="betamount">1000</span>
                                 <button class="btn">
                                     <img src="./assets/img/MarbleRace/icon/plus.png">
                                 </button>
@@ -259,7 +267,7 @@
                             <button class="btn btn-amountaction btn-2x">
                                 <img src="./assets/img/MarbleRace/icon/2x.png">
                             </button>
-                            <button class="btn btn-amountaction">
+                            <button class="btn btn-amountaction" data-bs-toggle="modal" data-bs-target="#chipamount_Modal">
                                 <img src="./assets/img/MarbleRace/icon/chipamount.png">
                             </button>
                             <button class="btn btn-amountaction btn-clear">
@@ -588,8 +596,32 @@
             </div>
         </div>
 
+        
+        <!--chip amount modal-->
+        <div class="modal fade" id="chipamount_Modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="result-title">Bet</div>
+                        <div class="manualamountBox d-flex align-items-center justify-content-between">
+                            <img src="./assets/img/MarbleRace/icon/chipamount.png">
+                            <input type="text" placeholder="1000">
+                        </div>
+                        <div class="text-end">Enter the bet amount</div>
+                        <div class="manualbtnBox d-flex align-items-center justify-content-between my-3">
+                            <button class="btn btn-secondary">Cancel</button>
+                            <button class="btn btn-primary">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--bethistory modal-->
-        <div class="modal fade" id="bethistory_Modal" tabindex="-1">
+        <div class="modal fade" id="bethistory_Modal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -963,7 +995,7 @@
         </div>
 
         <!--record modal-->
-        <div class="modal fade" id="record_Modal" tabindex="-1">
+        <div class="modal fade" id="record_Modal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1067,7 +1099,7 @@
         </div>
 
         <!--setting modal-->
-        <div class="modal fade" id="setting_Modal" tabindex="-1">
+        <div class="modal fade" id="setting_Modal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
