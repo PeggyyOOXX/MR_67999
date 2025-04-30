@@ -116,7 +116,7 @@
                         <!-- ball button -->
                         <div class="betarea-ballBox mx-05 my-05 pt-05">
                             <button class="btn btn-ball active">
-                                <img src="./assets/img/MarbleRace/ball/ball1.png">
+                                <img src="./assets/img/MarbleRace/ball/ball1.png" class="ball-img">
                                 <div class="betchipBox">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -125,7 +125,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball2.png">
+                                <img src="./assets/img/MarbleRace/ball/ball2.png" class="ball-img">
                                 <div class="betchipBox" style="display: none;">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -134,7 +134,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball3.png">
+                                <img src="./assets/img/MarbleRace/ball/ball3.png" class="ball-img">
                                 <div class="betchipBox" style="display: none;">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -143,7 +143,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball4.png">
+                                <img src="./assets/img/MarbleRace/ball/ball4.png" class="ball-img">
                                 <div class="betchipBox" style="display: none;">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -152,7 +152,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball5.png">
+                                <img src="./assets/img/MarbleRace/ball/ball5.png" class="ball-img">
                                 <div class="betchipBox">
                                     <div class="chipimgBox" style="display: none;">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -161,7 +161,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball6.png">
+                                <img src="./assets/img/MarbleRace/ball/ball6.png" class="ball-img">
                                 <div class="betchipBox" style="display: none;">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -170,7 +170,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball7.png">
+                                <img src="./assets/img/MarbleRace/ball/ball7.png" class="ball-img">
                                 <div class="betchipBox" style="display: none;">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -179,7 +179,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball8.png">
+                                <img src="./assets/img/MarbleRace/ball/ball8.png" class="ball-img">
                                 <div class="betchipBox" style="display: none;">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -188,7 +188,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball">
-                                <img src="./assets/img/MarbleRace/ball/ball9.png">
+                                <img src="./assets/img/MarbleRace/ball/ball9.png" class="ball-img">
                                 <div class="betchipBox" style="display: none;">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -197,7 +197,7 @@
                                 </div>
                             </button>
                             <button class="btn btn-ball active">
-                                <img src="./assets/img/MarbleRace/ball/ball10.png">
+                                <img src="./assets/img/MarbleRace/ball/ball10.png" class="ball-img">
                                 <div class="betchipBox">
                                     <div class="chipimgBox">
                                         <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
@@ -277,11 +277,11 @@
 
                         <!-- final bet amount -->
                         <div class="betarea-finalbetBox mx-05 my-10">
-                            <button class="btn btn-finalbet">
+                            <button class="btn btn-finalbet" data-bs-toggle="modal" data-bs-target="#repeat_Modal">
                                 <img src="./assets/img/MarbleRace/icon/repeat.png">
                                 <span>Repeat</span>
                             </button>
-                            <button class="btn btn-finalbet btn-confirm">
+                            <button class="btn btn-finalbet btn-confirm" data-bs-toggle="modal" data-bs-target="#confirmbet_Modal">
                                 <img src="./assets/img/MarbleRace/icon/confirmbet.png">
                                 <span>Confirm Bet</span>
                             </button>
@@ -605,15 +605,290 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <div class="result-title">Bet</div>
+                        <div class="result-title mb-2">Chip Amount</div>
                         <div class="manualamountBox d-flex align-items-center justify-content-between">
                             <img src="./assets/img/MarbleRace/icon/chipamount.png">
                             <input type="text" placeholder="1000">
                         </div>
                         <div class="text-end">Enter the bet amount</div>
                         <div class="manualbtnBox d-flex align-items-center justify-content-between my-3">
-                            <button class="btn btn-secondary">Cancel</button>
-                            <button class="btn btn-primary">OK</button>
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--confirm bet modal-->
+        <div class="modal fade" id="confirmbet_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="result-title mb-2">Confirm Bet</div>
+                        <!-- ball option -->
+                        <div class="betoption-ballBox d-flex align-items-center justify-content-center my-4">
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball1.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball2.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball3.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">500</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball4.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball5.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball6.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball7.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball8.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball9.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball10.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- doubleside option -->
+                        <div class="betoption-doublesideBox d-flex align-items-center justify-content-between my-4">
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Big</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="betoption-doubleside two d-flex flex-column">
+                                <span class="bet-optionname">Small</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Odd</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-doubleside two d-flex flex-column">
+                                <span class="bet-optionname">Even</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="manualbtnBox d-flex align-items-center justify-content-between my-3">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--reprat modal-->
+        <div class="modal fade" id="repeat_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="result-title mb-2">Reprat Bet</div>
+                        <!-- ball option -->
+                        <div class="betoption-ballBox d-flex align-items-center justify-content-center my-4">
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball1.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball2.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball3.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">500</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball4.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball5.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball6.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball7.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball8.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- doubleside option -->
+                        <div class="betoption-doublesideBox d-flex align-items-center justify-content-center my-4">
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Big</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Odd</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="manualbtnBox d-flex align-items-center justify-content-between my-3">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
                         </div>
                     </div>
                 </div>
