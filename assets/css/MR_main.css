@@ -139,6 +139,10 @@ img {width: 100%;}
     width: 100%;
     z-index: 2;
 }
+.bottombetarea {
+    overflow: hidden;
+    transition: height 1s ease;
+}
 .betareaBox{
     background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
 }
@@ -155,6 +159,11 @@ img {width: 100%;}
 .betarea-header img{
     width: 24px;
     height: auto;
+}
+.betarea-header-message{
+    width: 300px;
+    white-space:nowrap;
+    overflow-x: auto;
 }
 .betarea-ballBox {
     display: flex;
@@ -339,9 +348,6 @@ img {width: 100%;}
     flex: 0 0 40%;
 }
 /*--- Map way ---*/
-.mapway-header{
-    border-top: 1px solid #ddd1;
-}
 .mapway-header img{
     width: 24px;
     height: auto;
@@ -585,8 +591,8 @@ img {width: 100%;}
     font-weight: 700;
 }
 .manualamountBox input::placeholder{
-    color: rgba(255, 189, 66, 1);
-    font-weight: 700;
+    color: #fff6;
+    font-weight: 400;
 }
 .manualbtnBox button{
     width: 48%;
@@ -710,7 +716,22 @@ img {width: 100%;}
     color: rgba(81, 147, 255, 1);
     font-weight: 700;
 }
+/* 橫式畫面樣式 */
 @media (orientation: landscape) {
+    .mapwayBox {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        height: auto;
+        backdrop-filter: blur(6px);
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 3;
+        display: none;
+    }
+    .betarea-header-message{
+        width: 600px;
+    }
     .betarea-horizontal-left,
     .betarea-horizontal-right {
         width: 49%;
@@ -857,6 +878,7 @@ button{
 @media screen and (max-width: 767px){
     .MOBhide{display: none;}
 }
+
 
 
 
