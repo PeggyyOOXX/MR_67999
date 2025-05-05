@@ -166,6 +166,9 @@ img {width: 100%;}
     white-space:nowrap;
     overflow-x: auto;
 }
+.btn-slidebetarea{
+    padding: 0;
+}
 .betarea-ballBox {
     display: flex;
     flex-wrap: nowrap;
@@ -745,6 +748,8 @@ img {width: 100%;}
         z-index: 3;
         display: none;
     }
+
+
     .betarea-header-message{
         width: 600px;
     }
@@ -905,7 +910,6 @@ button{
 @media screen and (max-width: 767px){
     .MOBhide{display: none;}
 }
-
 
 
 
