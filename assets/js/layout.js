@@ -1,99 +1,75 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mapwayBox = document.querySelector(".mapwayBox");
     const mapwayBtn = document.querySelector(".mapwayBtn");
-    const closeBtn = document.querySelector(".closeBtn");
+    const mapwayCloseBtn = document.querySelector(".mapway-closeBtn");
     const betareaBoxRight = document.querySelector(".betareaBox");
     const toggleBtn = document.querySelector(".btn-slidebetarea");
     const bottomArea = document.querySelector(".bottombetarea");
     const slideimg = document.querySelector(".slideimg");
 
-    //顯示/隱藏bottombetarea
     let isCollapsed = false;
-    let originalHeight = bottomArea.scrollHeight + 'px';   // 初始高度
+
+    const originalHeightValue = bottomArea.scrollHeight;   // 初始高度
+    const originalHeight = originalHeightValue + 'px';
     bottomArea.style.height = originalHeight;   // 頁面載入時設定原高度
 
-    toggleBtn.addEventListener("click", function () {
-        if (!isCollapsed) {
-            bottomArea.style.height = '85px';   // 收合至高度85px
-            slideimg.src = "./assets/img/MarbleRace/icon/slidein.png";
-            isCollapsed = true;
-        } else {
-            const newHeight = bottomArea.scrollHeight + 'px';   // 展開回原高度
-            bottomArea.style.height = newHeight;
-            slideimg.src = "./assets/img/MarbleRace/icon/slideout.png";
-            isCollapsed = false;
-        }
-    });
-    
-    // 滑入/滑出mapwayBox
-    function toggleMapwayBox(displayStyle) {
-        if (mapwayBox) {
-            mapwayBox.style.display = displayStyle;
-        }
-        adjustBottomAreaHeight();
-    }
-    if (mapwayBtn) {
-        mapwayBtn.addEventListener("click", function () {
-            if (window.innerHeight < window.innerWidth) {  // 檢查是否為橫式畫面
-                mapwayBox.style.display = 'block';  // 在橫式畫面下隱藏mapwayBox
-            }
-            else {
-                const newHeight = bottomArea.scrollHeight + 'px';   // 展開回原高度
-                bottomArea.style.height = newHeight;
-            }
-        });
-    }
-    if (closeBtn) {
-        closeBtn.addEventListener("click", function () {
-            if (window.innerHeight < window.innerWidth) {  // 檢查是否為橫式畫面
-                mapwayBox.style.display = 'none';  // 在橫式畫面下隱藏mapwayBox
-            }
-            else {
-                bottomArea.style.height = '320px';
+
+    // 共用 隱藏/顯示bottomArea
+    function setupToggleBtn() {
+        if (!toggleBtn || !bottomArea || !slideimg) return;
+
+        toggleBtn.addEventListener("click", function () {
+            if (!isCollapsed) {
+                bottomArea.style.height = '85px';
+                slideimg.src = "./assets/img/MarbleRace/icon/slidein.png";
+                isCollapsed = true;
+            } else {
+                bottomArea.style.height = originalHeight;
+                slideimg.src = "./assets/img/MarbleRace/icon/slideout.png";
+                isCollapsed = false;
             }
         });
     }
 
-    // 調整mapwayBox高度，與betareaBox的高度一致
-    function adjustMapwayBoxHeight() {
-        if (betareaBoxRight && mapwayBox) {
-            const betareaHeight = betareaBoxRight.offsetHeight;   // 獲取betareaBox的高度
+    // 直式畫面動態
+    function handlePortraitMode() {
+        if (!bottomArea || !mapwayBtn || !mapwayCloseBtn) return;
+        mapwayCloseBtn.addEventListener("click", function () {   // 減少140px(mapwayBox滑出)
+            const newHeight = originalHeightValue - 145;
+            bottomArea.style.height = newHeight + 'px';
+        });
+        mapwayBtn.addEventListener("click", function () {   // 還原原始高度(mapwayBox滑入)
+            bottomArea.style.height = originalHeight;
+        });
+    }
+    if (window.innerHeight > window.innerWidth) {   // 如果是直式畫面則呼叫
+        handlePortraitMode();
+    }
+
+    // 橫式畫面動態
+    function handleLandscapeMode() {
+        if (!mapwayBtn || !mapwayCloseBtn || !mapwayBox || !betareaBoxRight) return;
+        mapwayBtn.addEventListener("click", function () {   // 顯示mapwayBox並對齊betareaBox高度
+            const betareaHeight = betareaBoxRight.offsetHeight;
             mapwayBox.style.height = betareaHeight + 'px';
-        }
+            mapwayBox.style.display = 'block';
+        });
+        mapwayCloseBtn.addEventListener("click", function () {   // 隱藏mapwayBox
+            mapwayBox.style.display = 'none';
+        });
     }
 
-    // 檢查螢幕方向並調整mapwayBox顯示方式
-    function adjustMapwayBoxForOrientation() {
-        if (window.innerHeight < window.innerWidth) {  // 橫式畫面
-            if (mapwayBox) {
-                mapwayBox.style.display = 'block';  // 顯示mapwayBox
-            }
-        } else {  // 直式畫面
-            if (mapwayBox) {
-                mapwayBox.style.display = 'none';  // 隱藏mapwayBox
-            }
-        }
+    // 初始化呼叫
+    setupToggleBtn();
+    if (window.innerHeight > window.innerWidth) {
+        handlePortraitMode();
+    } else {
+        handleLandscapeMode();
     }
-
-    window.addEventListener('resize', function() {   // 視窗改變時重新調整高度
-        if (window.innerHeight < window.innerWidth) {   // 只有橫式畫面下才調整高度
-            adjustMapwayBoxHeight();
-        } else {
-            const mapwayBox = document.querySelector('.mapwayBox');   // 如果不在橫式畫面下則清除高度設置
-          if (mapwayBox) {
-                mapwayBox.style.height = '';
-            }
-        }
+    // 旋轉螢幕時自動切換
+    window.addEventListener('resize', function () {
+        location.reload();
     });
-
-    window.addEventListener('load', function() {   // 頁面加載時檢查是否為橫式畫面
-        adjustMapwayBoxForOrientation();
-        if (window.innerHeight < window.innerWidth) {
-            adjustMapwayBoxHeight();
-        }
-    });
-    
-    
 
 });
 
