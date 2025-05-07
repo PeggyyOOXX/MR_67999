@@ -141,7 +141,7 @@ img {width: 100%;}
 }
 .bottombetarea {
     overflow: hidden;
-    transition: height 1s ease;
+    transition: height .5s ease;
 }
 .betareaBox{
     background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
@@ -353,6 +353,9 @@ img {width: 100%;}
     flex: 0 0 40%;
 }
 /*--- Map way ---*/
+.mapwayBox {
+    background-color: rgba(0, 0, 0, 0.7);
+}
 .mapway-header img{
     width: 24px;
     height: auto;
@@ -805,8 +808,6 @@ img {width: 100%;}
     font-weight: 700;
     text-shadow: 0 3px 5px #000;
 }
-
-
 .winamount-amount {
     color: rgba(255, 189, 66, 1);
 }
@@ -818,6 +819,204 @@ img {width: 100%;}
     top: 48%;
     pointer-events: none;
 }
+/*--- redenvelope ---*/
+.redenvelopeamount{
+    gap: 5px;
+}
+.redenvelopeamount img{
+    width: 24px;
+    height: auto;
+}
+.redenvelopeamount input {
+    flex: 1; 
+    padding: 5px 10px;
+    background: linear-gradient(282.29deg, rgba(79, 85, 131, 0.5) 0%, #292E4E 39.56%, #1B1F3A 100%);
+    border: 1px solid #4F5583;
+    border-radius: 4px;
+    color: rgba(255, 189, 66, 1);
+}
+.redenvelopenote{
+    color: rgba(255, 189, 66, 1);
+}
+/*--- present ---*/
+.presenttypeBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.present-option{
+    background: linear-gradient(0deg, rgba(188, 190, 196, 0.4), rgba(188, 190, 196, 0.4));
+    border: 1px solid rgba(188, 190, 196, 0.4);
+    border-radius: 16px;
+    padding: 8px;
+    margin: 4px;
+}
+.present-option:active{
+    background: linear-gradient(0deg, rgba(188, 190, 196, 1), rgba(188, 190, 196, 1));
+}
+.presentimg {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.presentname{
+    color: rgba(255, 189, 66, 1);
+}
+.nocolor-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.presentpopupBox {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ribbonsgif {
+    position: absolute;
+    top: 13%;
+    z-index: 2;
+}
+.presentgif {
+    position: absolute;
+    top: 13%;
+    z-index: 1;
+}
+
+
+
+
+/*--- live chat ---*/
+.livechatBox{
+    background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
+}
+.chatrecord{
+    border-bottom: 1px solid rgba(238, 238, 238, .2);
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: 110px;
+    overflow-y: auto;
+}
+.chatunit{
+    padding: 2px 0;
+}
+.chatunit img{
+    width: 25px;
+    height: 25px;
+}
+.chataction img{
+    width: 35px;
+    height: 35px;
+}
+.userchat{
+    background: linear-gradient(78deg, rgba(79, 85, 131, 0.5) 0%, #292E4E 40%, #1B1F3A 100%);
+    border: 1px solid #4F5583;
+    border-radius: 4px;
+    width: 60%;
+    padding: 5px;
+}
+
+
+
+.openselectroomBox {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
+    padding: 16px 4px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    z-index: 4;
+    transition: left 0.3s ease;
+}
+.openarrow {
+    width: 20px;
+    height: auto;
+}
+.selectroomBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 48px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.selectroomBox.open {
+    transform: translateX(0);
+}
+.btn-liveroomlevel{
+    background: linear-gradient(282.29deg, rgba(79, 85, 131, 0.5) 0%, #292E4E 39.56%, #1B1F3A 100%);
+    border: 1px solid #4F5583;
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px 4px;
+    width: 49%;
+}
+.btn-liveroomlevel.active{
+    background: linear-gradient(180deg, #FF006F 31.25%, #66002D 100%);
+    border: 1px solid rgba(188, 190, 196, 0.4);
+}
+
+.livelevelBox-general, .livelevelBox-vip{
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 100px;
+}
+.liveroomBox{
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(188, 190, 196, 0.4);
+    position: relative;
+}
+.liveroomBox img{
+    border-radius: 8px;
+}
+.liveHostnum {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-weight: bold;
+    z-index: 2;
+    color: rgba(255, 192, 192, 1);
+    text-shadow: 1px 1px 5px #000, -1px -1px 5px #000;
+}
+.liveGamenum{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    text-shadow: 1px 1px 5px #000, -1px -1px 5px #000;
+    background: linear-gradient(180deg, rgba(238, 238, 238, 0.5) 0%, rgba(153, 153, 153, 0.5) 100%);
+    border-radius: 8px;
+    padding: 0 8px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.75) inset;
+    backdrop-filter: blur(10px);
+}
+
+
+
+
+
+
 
 
 
@@ -842,12 +1041,9 @@ img {width: 100%;}
         width: 50%;
         height: auto;
         backdrop-filter: blur(6px);
-        background-color: rgba(0, 0, 0, 0.5);
         z-index: 3;
         display: none;
     }
-
-
     .betarea-header-message{
         width: 600px;
     }
