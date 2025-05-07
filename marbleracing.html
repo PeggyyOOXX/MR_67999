@@ -54,86 +54,19 @@
             <!-- Main -->
             <div class="main">
                 <div class="videoBox">
-                    <div class="LIVEvideo">
-                        <video src="./assets/img/MarbleRace/normal-sample.mp4" autoplay muted></video>
+                    <div class="videomain">
+                        <div class="live-MarbleRacing">
+                            <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted></video>
+                        </div>
                     </div>
                     <div class="videoswitch">
-                        <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted></video>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Select LIVE room -->
-            <div class="openselectroomBox">
-                <img src="./assets/img/MarbleRace/icon/arrowright.png" class="openarrow">
-            </div>
-            <div class="selectroomBox">
-                <div class="nav nav-pills tabselectroomBox d-flex align-items-center justify-content-between">
-                    <button class="btn-liveroomlevel nav-link active" data-bs-toggle="pill" data-bs-target="#liveroom_general">General</button>
-                    <button class="btn-liveroomlevel nav-link" data-bs-toggle="pill" data-bs-target="#liveroom_vip">VIP</button>
-                </div>
-
-                <div class="tab-content">
-                    <!--General-->
-                    <div class="tab-pane fade show active" id="liveroom_general">
-                        <div class="livelevelBox-general">
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
-                                <div class="liveHostnum">Girl1</div>
-                                <div class="liveGamenum">Ball_01</div>
-                            </div>
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
-                                <div class="liveHostnum">Girl2</div>
-                                <div class="liveGamenum">Ball_02</div>
-                            </div>
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
-                                <div class="liveHostnum">Girl3</div>
-                                <div class="liveGamenum">Ball_03</div>
-                            </div>
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
-                                <div class="liveHostnum">Girl4</div>
-                                <div class="liveGamenum">Ball_04</div>
-                            </div>
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
-                                <div class="liveHostnum">Girl5</div>
-                                <div class="liveGamenum">Ball_05</div>
-                            </div>
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
-                                <div class="liveHostnum">Girl6</div>
-                                <div class="liveGamenum">Ball_06</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--VIP-->
-                    <div class="tab-pane fade" id="liveroom_vip">
-                        <div class="livelevelBox-vip">
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
-                                <div class="liveHostnum">Girl1</div>
-                                <div class="liveGamenum">Ball_01</div>
-                            </div>
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
-                                <div class="liveHostnum">Girl2</div>
-                                <div class="liveGamenum">Ball_02</div>
-                            </div>
-                            <div class="liveroomBox">
-                                <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
-                                <div class="liveHostnum">Girl3</div>
-                                <div class="liveGamenum">Ball_03</div>
-                            </div>
+                        <div class="live-anchor">
+                            <video src="./assets/img/MarbleRace/normal-sample.mp4" autoplay muted></video>
                         </div>
                     </div>
                 </div>
-
             </div>
-            
+
             <!-- Bottom block -->
             <div class="bottom bottombetarea">
                 <!-- menu drop left -->
@@ -157,11 +90,11 @@
                                 <img src="./assets/img/MarbleRace/icon/record.png">
                             </button>
                         </li>
-                        <li>
+                        <!--<li>
                             <button class="dropdown-item">
                                 <img src="./assets/img/MarbleRace/icon/rotate.png">
                             </button>
-                        </li>
+                        </li>-->
                         <li>
                             <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#setting_Modal">
                                 <img src="./assets/img/MarbleRace/icon/setting.png">
@@ -201,7 +134,7 @@
                         <input type="text" placeholder="Say something..." class="userchat">
                         <button class="btn btn-liveinteract" data-bs-toggle="modal" data-bs-target="#redenvelope_Modal"><img src="./assets/img/MarbleRace/icon/redenvelope.png"></button>
                         <button class="btn btn-liveinteract" data-bs-toggle="modal" data-bs-target="#present_Modal"><img src="./assets/img/MarbleRace/icon/present.png"></button>
-                        <button class="btn btn-livedown"><img src="./assets/img/MarbleRace/icon/arrowdown.png"></button>
+                        <button class="btn btn-livedown"><img src="./assets/img/MarbleRace/icon/arrowdown.png" class="livearrow"></button>
                     </div>
                 </div>
                 <!-- Bet Area -->
@@ -213,8 +146,8 @@
                             <span>Message~Message~~Message~~~</span>
                         </div>
                         <div>
-                            <button class="btn btn-slidebetarea">
-                                <img src="./assets/img/MarbleRace/icon/slideout.png" class="slideimg">
+                            <button class="btn btn-showhidebetarea">
+                                <img src="./assets/img/MarbleRace/icon/zoomout.png" class="showhidebetareaimg">
                             </button>
                         </div>
                     </div>
@@ -402,7 +335,7 @@
                 </div>
 
                 <!-- Mapway -->
-                <div class="mapwayBox">
+                <div class="mapwayBox" style="display: block;">
                     <div class="mapway-header d-flex align-items-center justify-content-between mx-05 mb-05">
                         <div>Mapway</div>
                         <div>
@@ -701,6 +634,80 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Select LIVE room -->
+            <div class="selectliveBox">
+                <div class="openselectroomBox">
+                    <img src="./assets/img/MarbleRace/icon/arrowright.png" class="openarrow">
+                </div>
+                <div class="selectroomBox">
+                    <div class="nav nav-pills tabselectroomBox d-flex align-items-center justify-content-between">
+                        <button class="btn-liveroomlevel nav-link active" data-bs-toggle="pill" data-bs-target="#liveroom_general">General</button>
+                        <button class="btn-liveroomlevel nav-link" data-bs-toggle="pill" data-bs-target="#liveroom_vip">VIP</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!--General-->
+                        <div class="tab-pane fade show active" id="liveroom_general">
+                            <div class="livelevelBox-general">
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl1</div>
+                                    <div class="liveGamenum">Ball_01</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl2</div>
+                                    <div class="liveGamenum">Ball_02</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl3</div>
+                                    <div class="liveGamenum">Ball_03</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl4</div>
+                                    <div class="liveGamenum">Ball_04</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl5</div>
+                                    <div class="liveGamenum">Ball_05</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl6</div>
+                                    <div class="liveGamenum">Ball_06</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--VIP-->
+                        <div class="tab-pane fade" id="liveroom_vip">
+                            <div class="livelevelBox-vip">
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                    <div class="liveHostnum">Girl1</div>
+                                    <div class="liveGamenum">Ball_01</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                    <div class="liveHostnum">Girl2</div>
+                                    <div class="liveGamenum">Ball_02</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                    <div class="liveHostnum">Girl3</div>
+                                    <div class="liveGamenum">Ball_03</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
         
@@ -1473,7 +1480,6 @@
                             </div>
                             <div class="record-tabcontent tab-pane fade" id="statistics_tab">
                                 <div class="statistics-doublesideBox d-flex align-items-center justify-content-between">
-                                    <div class="statisticsdoubleside-total fw-bold">#100</div>
                                     <div class="statisticsdoublesideBox">
                                         <span class="statisticsdoubleside-one">B</span>
                                         <span class="statisticsdoubleside-num">10</span>
@@ -2101,6 +2107,13 @@
                     <img src="./assets/img/MarbleRace/icon/snowballGIF.gif" style="display: none;">
                     <img src="./assets/img/MarbleRace/icon/lollipopGIF.gif" style="display: none;">
                 </div>
+            </div>
+        </div>
+
+        <!-- rotate warning -->
+        <div class="rotatewarning-popup">
+            <div class="">
+                <img src="./assets/img/CockFight/icon/rotate.png">
             </div>
         </div>
 
