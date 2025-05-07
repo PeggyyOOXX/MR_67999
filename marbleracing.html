@@ -55,16 +55,88 @@
             <div class="main">
                 <div class="videoBox">
                     <div class="LIVEvideo">
-                        <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted></video>
-                    </div>
-                    <div class="videoswitch">
                         <video src="./assets/img/MarbleRace/normal-sample.mp4" autoplay muted></video>
                     </div>
+                    <div class="videoswitch">
+                        <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted></video>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Select LIVE room -->
+            <div class="openselectroomBox">
+                <img src="./assets/img/MarbleRace/icon/arrowright.png" class="openarrow">
+            </div>
+            <div class="selectroomBox">
+                <div class="nav nav-pills tabselectroomBox d-flex align-items-center justify-content-between">
+                    <button class="btn-liveroomlevel nav-link active" data-bs-toggle="pill" data-bs-target="#liveroom_general">General</button>
+                    <button class="btn-liveroomlevel nav-link" data-bs-toggle="pill" data-bs-target="#liveroom_vip">VIP</button>
+                </div>
+
+                <div class="tab-content">
+                    <!--General-->
+                    <div class="tab-pane fade show active" id="liveroom_general">
+                        <div class="livelevelBox-general">
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                <div class="liveHostnum">Girl1</div>
+                                <div class="liveGamenum">Ball_01</div>
+                            </div>
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                <div class="liveHostnum">Girl2</div>
+                                <div class="liveGamenum">Ball_02</div>
+                            </div>
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                <div class="liveHostnum">Girl3</div>
+                                <div class="liveGamenum">Ball_03</div>
+                            </div>
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                <div class="liveHostnum">Girl4</div>
+                                <div class="liveGamenum">Ball_04</div>
+                            </div>
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                <div class="liveHostnum">Girl5</div>
+                                <div class="liveGamenum">Ball_05</div>
+                            </div>
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                <div class="liveHostnum">Girl6</div>
+                                <div class="liveGamenum">Ball_06</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--VIP-->
+                    <div class="tab-pane fade" id="liveroom_vip">
+                        <div class="livelevelBox-vip">
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                <div class="liveHostnum">Girl1</div>
+                                <div class="liveGamenum">Ball_01</div>
+                            </div>
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                <div class="liveHostnum">Girl2</div>
+                                <div class="liveGamenum">Ball_02</div>
+                            </div>
+                            <div class="liveroomBox">
+                                <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                <div class="liveHostnum">Girl3</div>
+                                <div class="liveGamenum">Ball_03</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             
             <!-- Bottom block -->
             <div class="bottom bottombetarea">
+                <!-- menu drop left -->
                 <div class="menudropleftBox dropstart">
                     <button class="btn btn-menudropleft dropdown-toggle" data-bs-toggle="dropdown">
                         <img src="./assets/img/MarbleRace/icon/menu.png">
@@ -97,10 +169,45 @@
                         </li>
                     </ul>
                 </div>
+                <!-- live chat -->
+                <div class="livechatBox">
+                    <div class="chatrecord">
+                        <div class="chatunit">
+                            <img src="./assets/img/icon/userimg.png">
+                            <span>Love you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/icon/userimg.png">
+                            <span>Thank you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/icon/userimg.png">
+                            <span>See you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/icon/userimg.png">
+                            <span>Bless you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/icon/userimg.png">
+                            <span>Help you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/icon/userimg.png">
+                            <span>Miss you</span>
+                        </div>
+                    </div>
+                    <div class="chataction d-flex align-items-center justify-content-between py-05 px-05">
+                        <input type="text" placeholder="Say something..." class="userchat">
+                        <button class="btn btn-liveinteract" data-bs-toggle="modal" data-bs-target="#redenvelope_Modal"><img src="./assets/img/MarbleRace/icon/redenvelope.png"></button>
+                        <button class="btn btn-liveinteract" data-bs-toggle="modal" data-bs-target="#present_Modal"><img src="./assets/img/MarbleRace/icon/present.png"></button>
+                        <button class="btn btn-livedown"><img src="./assets/img/MarbleRace/icon/arrowdown.png"></button>
+                    </div>
+                </div>
                 <!-- Bet Area -->
                 <div class="betareaBox">
                     <!-- message or else -->
-                    <div class="betarea-header d-flex align-items-center justify-content-between mx-05 my-05 py-05">
+                    <div class="betarea-header d-flex align-items-center justify-content-between mx-05 mb-05 py-05">
                         <div class="betarea-header-message">
                             <img src="./assets/img/MarbleRace/icon/champion.png">
                             <span>Message~Message~~Message~~~</span>
@@ -296,7 +403,7 @@
 
                 <!-- Mapway -->
                 <div class="mapwayBox">
-                    <div class="mapway-header d-flex align-items-center justify-content-between mx-05 my-05">
+                    <div class="mapway-header d-flex align-items-center justify-content-between mx-05 mb-05">
                         <div>Mapway</div>
                         <div>
                             <button class="btn btn-slidemapway mapway-closeBtn">
@@ -1892,6 +1999,108 @@
             </div>
             <div class="goldcoinBox">
                 <img src="./assets/img/MarbleRace/gif/gold.gif">
+            </div>
+        </div>
+
+        <!--redenvelope modal-->
+        <div class="modal fade" id="redenvelope_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <span>Tips</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="redenvelopeamountBox">
+                            <div class="redenvelopeamount d-flex align-items-center">
+                                <img src="./assets/img/MarbleRace/icon/redenvelope.png">
+                                <input type="text" placeholder="000,000">
+                            </div>
+                            <span class="redenvelopenote">Send a tip</span>
+                        </div>
+                        <div class="manualbtnBox my-3">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--present modal-->
+        <div class="modal fade" id="present_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <span>Gift</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+
+                        <div class="presenttypeBox">
+                            <div class="present-option">
+                                <div class="presentimg">
+                                    <img src="./assets/img/icon/rocket.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Rocket</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option">
+                                <div class="presentimg">
+                                    <img src="./assets/img/icon/flower.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Flower</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option">
+                                <div class="presentimg">
+                                    <img src="./assets/img/icon/diamond.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Diamond</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option">
+                                <div class="presentimg">
+                                    <img src="./assets/img/icon/snowball.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Snowball</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option">
+                                <div class="presentimg">
+                                    <img src="./assets/img/icon/lollipop.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Lollipop</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="manualbtnBox my-3 mt-5">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nocolor-overlay" style="display: none;">
+            <div class="presentpopupBox">
+                <img src="./assets/img/icon/ribbonsGIF.gif" class="ribbonsgif">
+                <div class="presentgif">
+                    <img src="./assets/img/icon/rocketGIF.gif" style="display: none;">
+                    <img src="./assets/img/icon/flowerGIF.gif">
+                    <img src="./assets/img/icon/diamondGIF.gif" style="display: none;">
+                    <img src="./assets/img/icon/snowballGIF.gif" style="display: none;">
+                    <img src="./assets/img/icon/lollipopGIF.gif" style="display: none;">
+                </div>
             </div>
         </div>
 
