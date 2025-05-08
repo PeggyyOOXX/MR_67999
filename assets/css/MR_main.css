@@ -135,7 +135,7 @@ img {width: 100%;}
 }
 .live-MarbleRacing .carousel-control-next, .live-MarbleRacing .carousel-control-prev{
     top: unset;
-    bottom: 20px;
+    bottom: 80px;
     width: unset;
 }
 .live-MarbleRacing .carousel-indicators [data-bs-target]{
@@ -911,10 +911,6 @@ img {width: 100%;}
     top: 13%;
     z-index: 1;
 }
-
-
-
-
 /*--- live chat ---*/
 .livechatBox{
     background: linear-gradient(0deg, rgba(0, 6, 27, 0.8) 0%, rgba(17, 29, 65, 0.8) 100%);
@@ -947,9 +943,7 @@ img {width: 100%;}
     width: 60%;
     padding: 5px;
 }
-
-
-
+/*--- live select room ---*/
 .openselectroomBox {
     position: fixed;
     top: 10%;
@@ -996,7 +990,6 @@ img {width: 100%;}
     background: linear-gradient(180deg, #FF006F 31.25%, #66002D 100%);
     border: 1px solid rgba(188, 190, 196, 0.4);
 }
-
 .livelevelBox-general, .livelevelBox-vip{
     height: 100vh;
     overflow-y: auto;
@@ -1032,9 +1025,7 @@ img {width: 100%;}
     box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.75) inset;
     backdrop-filter: blur(10px);
 }
-
-
-
+/*--- device rotation warning ---*/
 .rotatewarning-popup{
     display: none;
     position: fixed;
@@ -1042,7 +1033,7 @@ img {width: 100%;}
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -1050,15 +1041,6 @@ img {width: 100%;}
 .rotatewarning-popup.show {
     display: flex;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* 文字顏色 */
@@ -1112,8 +1094,8 @@ img {width: 100%;}
     .goldcoinBox img{
         width: 50%;
     }
-    .live-MarbleRacing .carousel-control-next, .carousel-control-prev{
-        top: 100px;
+    .live-MarbleRacing .carousel-control-next, .live-MarbleRacing .carousel-control-prev{
+        top: 80px;
         bottom: unset;
     }
 }
