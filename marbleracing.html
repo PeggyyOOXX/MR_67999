@@ -12,7 +12,7 @@
 
         <!--樣式-->
         <link rel="stylesheet" href="./assets/css/MR_main.css">
-        <script type="text/javascript" src="./assets/js/layout.js"></script>
+        <script type="text/javascript" src="./assets/js/MR_layout.js"></script>
     </head>
 
     <body>
@@ -56,12 +56,35 @@
                 <div class="videoBox">
                     <div class="videomain">
                         <div class="live-MarbleRacing">
-                            <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted></video>
+                            <div id="carousel_MRlive" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carousel_MRlive" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#carousel_MRlive" data-bs-slide-to="1"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted playsinline></video>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted playsinline></video>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel_MRlive" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel_MRlive" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!--
+                            <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted></video>-->
                         </div>
                     </div>
                     <div class="videoswitch">
                         <div class="live-anchor">
-                            <video src="./assets/img/MarbleRace/normal-sample.mp4" autoplay muted></video>
+                            <video src="./assets/img/MarbleRace/normal-sample.mp4" autoplay muted playsinline></video>
                         </div>
                     </div>
                 </div>
@@ -2044,7 +2067,7 @@
                     <div class="modal-body text-center">
 
                         <div class="presenttypeBox">
-                            <div class="present-option">
+                            <div class="present-option" data-bs-dismiss="modal">
                                 <div class="presentimg">
                                     <img src="./assets/img/MarbleRace/icon/rocket.png" class="presentobject">
                                 </div>
@@ -2053,7 +2076,7 @@
                                     <div class="presentprice">000,000</div>
                                 </div>
                             </div>
-                            <div class="present-option">
+                            <div class="present-option" data-bs-dismiss="modal">
                                 <div class="presentimg">
                                     <img src="./assets/img/MarbleRace/icon/flower.png" class="presentobject">
                                 </div>
@@ -2062,7 +2085,7 @@
                                     <div class="presentprice">000,000</div>
                                 </div>
                             </div>
-                            <div class="present-option">
+                            <div class="present-option" data-bs-dismiss="modal">
                                 <div class="presentimg">
                                     <img src="./assets/img/MarbleRace/icon/diamond.png" class="presentobject">
                                 </div>
@@ -2071,7 +2094,7 @@
                                     <div class="presentprice">000,000</div>
                                 </div>
                             </div>
-                            <div class="present-option">
+                            <div class="present-option" data-bs-dismiss="modal">
                                 <div class="presentimg">
                                     <img src="./assets/img/MarbleRace/icon/snowball.png" class="presentobject">
                                 </div>
@@ -2080,7 +2103,7 @@
                                     <div class="presentprice">000,000</div>
                                 </div>
                             </div>
-                            <div class="present-option">
+                            <div class="present-option" data-bs-dismiss="modal">
                                 <div class="presentimg">
                                     <img src="./assets/img/MarbleRace/icon/lollipop.png" class="presentobject">
                                 </div>
@@ -2113,7 +2136,7 @@
         <!-- rotate warning -->
         <div class="rotatewarning-popup">
             <div class="">
-                <img src="./assets/img/CockFight/icon/rotate.png">
+                <img src="./assets/img/MarbleRace/icon/rotate.png">
             </div>
         </div>
 
