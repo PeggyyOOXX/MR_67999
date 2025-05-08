@@ -20,7 +20,6 @@ img {width: 100%;}
     color: unset;
 }
 
-
 /*--- 限制畫面寬高 ---*/
 .main{
     flex: 1 0 auto;
@@ -133,6 +132,22 @@ img {width: 100%;}
     max-height: 120px;
     max-width: 120px;
     display: block;
+}
+.live-MarbleRacing .carousel-control-next, .live-MarbleRacing .carousel-control-prev{
+    top: unset;
+    bottom: 20px;
+    width: unset;
+}
+.live-MarbleRacing .carousel-indicators [data-bs-target]{
+    width: 20px;
+    position: relative;
+    bottom: -20px;
+}
+.videoswitch .live-MarbleRacing .carousel-control-next, .videoswitch .live-MarbleRacing .carousel-control-prev{
+    display: none;
+}
+.videoswitch .live-MarbleRacing .carousel-indicators [data-bs-target]{
+    display: none;
 }
 /*--- Bet Area ---*/
 .bottom{
@@ -1096,6 +1111,10 @@ img {width: 100%;}
     }
     .goldcoinBox img{
         width: 50%;
+    }
+    .live-MarbleRacing .carousel-control-next, .carousel-control-prev{
+        top: 100px;
+        bottom: unset;
     }
 }
 /*--- Margin ---*/
