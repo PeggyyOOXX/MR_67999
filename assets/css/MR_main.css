@@ -116,7 +116,7 @@ img {width: 100%;}
     align-items: flex-start;
     margin-top: 45px;
     z-index: 1;
-    background: url(../img/MarbleRace/bg/fuzzyBG.png?mm) no-repeat;
+    background: url(../img/MarbleRace/bg/fuzzyBG.png) no-repeat;
     background-size: cover;
 }
 .videomain video {
