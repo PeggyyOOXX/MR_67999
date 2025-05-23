@@ -1,0 +1,2161 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+        <meta name="format-detection" content="telephone=no">
+        <title>Marble Racing</title>
+
+        <!--BS-->
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+
+        <!--樣式-->
+        <link rel="stylesheet" href="./assets/css/MR_main.css">
+        <script type="text/javascript" src="./assets/js/MR_layout.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- header -->
+            <div class="header d-flex align-items-center justify-content-between">
+                <div class="header-left">
+                    <div class="logoBox">
+                        <img src="./assets/img/MarbleRace/logo.png">
+                    </div>
+                </div>
+                <div class="header-right d-flex align-items-center justify-content-between">
+                    <div class="balanceBox">
+                        <img src="./assets/img/MarbleRace/icon/dollar.png">
+                        <span class="balance">666,666.66</span>
+                    </div>
+                    <div class="refreshbalanceBox">
+                        <button class="btn btn-refreshbalance">
+                            <img src="./assets/img/MarbleRace/icon/refresh.png">
+                        </button>
+                    </div>
+                    <div class="userimgBox">
+                        <img src="./assets/img/MarbleRace/icon/user.png">
+                    </div>
+                    <div class="dropdown dropdown-langBox">
+                        <button class="btn dropdown-toggle dropdown-lang" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <img src="./assets/img/MarbleRace/lang/en.png">
+                        </button>
+                        <ul class="dropdown-menu dropdown-lang-menu">
+                            <li><button class="dropdown-item" type="button"><img src="./assets/img/MarbleRace/lang/en.png"></button></li>
+                            <li><button class="dropdown-item" type="button"><img src="./assets/img/MarbleRace/lang/vn.png"></button></li>
+                            <li><button class="dropdown-item" type="button"><img src="./assets/img/MarbleRace/lang/cn.png"></button></li>
+                        </ul>
+                    </div>
+                </div>
+                    
+            </div>
+
+            <!-- Main -->
+            <div class="main">
+                <div class="videoBox">
+                    <div class="videomain">
+                        <div class="live-MarbleRacing">
+                            <div id="carousel_MRlive" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carousel_MRlive" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#carousel_MRlive" data-bs-slide-to="1"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted playsinline></video>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <video src="./assets/img/MarbleRace/sample2.mp4" autoplay muted playsinline></video>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel_MRlive" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel_MRlive" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="videoswitch">
+                        <div class="live-anchor">
+                            <video src="./assets/img/MarbleRace/normal-sample.mp4" autoplay muted playsinline></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom block -->
+            <div class="bottom bottombetarea">
+                <!-- menu drop left -->
+                <div class="menudropleftBox dropstart d-flex justify-content-between align-items-center">
+                    <div class="countdown-timer">
+                        <svg class="countdown-ring" width="36" height="36">
+                            <circle class="countdown-bg" cx="18" cy="18" r="14" />
+                            <circle class="countdown-circle" cx="18" cy="18" r="14" />
+                        </svg>
+                        <span class="countdown-text">-</span>
+                    </div>
+                    <button class="btn btn-menudropleft dropdown-toggle" data-bs-toggle="dropdown">
+                        <img src="./assets/img/MarbleRace/icon/menu.png">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <button class="dropdown-item mapwayBtn">
+                                <img src="./assets/img/MarbleRace/icon/mapway.png">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#bethistory_Modal">
+                                <img src="./assets/img/MarbleRace/icon/bethistory.png">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#record_Modal">
+                                <img src="./assets/img/MarbleRace/icon/record.png">
+                            </button>
+                        </li>
+                        <!--<li>
+                            <button class="dropdown-item">
+                                <img src="./assets/img/MarbleRace/icon/rotate.png">
+                            </button>
+                        </li>-->
+                        <li>
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#setting_Modal">
+                                <img src="./assets/img/MarbleRace/icon/setting.png">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- live chat -->
+                <div class="livechatBox">
+                    <div class="chatrecord">
+                        <div class="chatunit">
+                            <img src="./assets/img/MarbleRace/icon/userimg.png">
+                            <span>Love you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/MarbleRace/icon/userimg.png">
+                            <span>Thank you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/MarbleRace/icon/userimg.png">
+                            <span>See you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/MarbleRace/icon/userimg.png">
+                            <span>Bless you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/MarbleRace/icon/userimg.png">
+                            <span>Help you</span>
+                        </div>
+                        <div class="chatunit">
+                            <img src="./assets/img/MarbleRace/icon/userimg.png">
+                            <span>Miss you</span>
+                        </div>
+                    </div>
+                    <div class="chataction d-flex align-items-center justify-content-between py-05 px-05">
+                        <input type="text" placeholder="Say something..." class="userchat">
+                        <button class="btn btn-liveinteract" data-bs-toggle="modal" data-bs-target="#redenvelope_Modal"><img src="./assets/img/MarbleRace/icon/redenvelope.png"></button>
+                        <button class="btn btn-liveinteract" data-bs-toggle="modal" data-bs-target="#present_Modal"><img src="./assets/img/MarbleRace/icon/present.png"></button>
+                        <button class="btn btn-livedown"><img src="./assets/img/MarbleRace/icon/arrowdown.png" class="livearrow"></button>
+                    </div>
+                </div>
+                <!-- Bet Area -->
+                <div class="betareaBox">
+                    <!-- message or else -->
+                    <div class="betarea-header d-flex align-items-center justify-content-between mx-05 mb-05 py-05">
+                        <div class="betarea-header-message">
+                            <img src="./assets/img/MarbleRace/icon/champion.png">
+                            <span>Message~Message~~Message~~~</span>
+                            <span style="display:none;">Champion: Ball<span class="championresult-ballnum">10</span></span>
+                        </div>
+                        <div>
+                            <button class="btn btn-showhidebetarea">
+                                <img src="./assets/img/MarbleRace/icon/zoomout.png" class="showhidebetareaimg">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="betarea-horizontal-left">
+                        <!-- ball button -->
+                        <div class="betarea-ballBox mx-05 my-05 pt-05">
+                            <button class="btn btn-ball active">
+                                <img src="./assets/img/MarbleRace/ball/ball1.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball2.png" class="ball-img">
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">3000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball3.png" class="ball-img">
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">3000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball4.png" class="ball-img">
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">1000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball5.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox" style="display: none;">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">1000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball6.png" class="ball-img">
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">1000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball7.png" class="ball-img">
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">1000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball8.png" class="ball-img">
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">1000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball9.png" class="ball-img">
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">1000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-ball active">
+                                <img src="./assets/img/MarbleRace/ball/ball10.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">1000</span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <!-- double side button -->
+                        <div class="betarea-doublesideBox mx-05 my-10">
+                            <button class="btn btn-doubleside-one d-flex flex-column active">
+                                <span class="bet-optionname">Big</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-doubleside-two d-flex flex-column">
+                                <span class="bet-optionname">Small</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-doubleside-one d-flex flex-column">
+                                <span class="bet-optionname">Odd</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox" style="display: none;">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="btn btn-doubleside-two d-flex flex-column active">
+                                <span class="bet-optionname">Even</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="betarea-horizontal-right">
+                        <!-- bet amount setting -->
+                        <div class="betarea-amountsettingBox mx-05 my-10">
+                            <div class="totalamountBox d-flex align-items-center justify-content-between">
+                                <button class="btn">
+                                    <img src="./assets/img/MarbleRace/icon/minus.png">
+                                </button>
+                                <span class="betamount">1000</span>
+                                <button class="btn">
+                                    <img src="./assets/img/MarbleRace/icon/plus.png">
+                                </button>
+                            </div>
+                            <button class="btn btn-amountaction btn-2x">
+                                <img src="./assets/img/MarbleRace/icon/2x.png">
+                            </button>
+                            <button class="btn btn-amountaction" data-bs-toggle="modal" data-bs-target="#chipamount_Modal">
+                                <img src="./assets/img/MarbleRace/icon/chipamount.png">
+                            </button>
+                            <button class="btn btn-amountaction btn-clear">
+                                <img src="./assets/img/MarbleRace/icon/clear.png">
+                            </button>
+                        </div>
+
+                        <!-- final bet amount -->
+                        <div class="betarea-finalbetBox mx-05 my-10">
+                            <button class="btn btn-finalbet" data-bs-toggle="modal" data-bs-target="#repeat_Modal">
+                                <img src="./assets/img/MarbleRace/icon/repeat.png">
+                                <span>Repeat</span>
+                            </button>
+                            <button class="btn btn-finalbet btn-confirm" data-bs-toggle="modal" data-bs-target="#confirmbet_Modal">
+                                <img src="./assets/img/MarbleRace/icon/confirmbet.png">
+                                <span>Confirm Bet</span>
+                            </button>
+                            <button class="btn btn-finalbet">
+                                <img src="./assets/img/MarbleRace/icon/random.png">
+                                <span>Random</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Mapway -->
+                <div class="mapwayBox" style="display: block;">
+                    <div class="mapway-header d-flex align-items-center justify-content-between mx-05 py-05">
+                        <div>Mapway</div>
+                        <div>
+                            <button class="btn btn-slidemapway mapway-closeBtn">
+                                <img src="./assets/img/MarbleRace/icon/close.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mx-05 mt-05">
+                        <div class="tab-content mapway-tab-content">
+                            <div class="tab-pane fade show active" id="mapway_BStable">
+                                <div class="mapway-tableBox">
+                                    <table class="mapway-table">
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="way-blue">B</span></td>
+                                                <td><span class="way-red">S</span></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="mapway_OEtable">
+                                <div class="mapway-tableBox">
+                                    <table class="mapway-table">
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                                <td><span class="way-blue">O</span></td>
+                                                <td><span class="way-red">E</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav flex-column nav-pills">
+                            <button class="btn-mapwaytable nav-link active" data-bs-toggle="pill" data-bs-target="#mapway_BStable" type="button">Big/Small</button>
+                            <button class="btn-mapwaytable nav-link" data-bs-toggle="pill" data-bs-target="#mapway_OEtable" type="button">Odd/Even</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select LIVE room -->
+            <div class="selectliveBox">
+                <div class="openselectroomBox">
+                    <img src="./assets/img/MarbleRace/icon/arrowright.png" class="openarrow">
+                </div>
+                <div class="selectroomBox">
+                    <div class="nav nav-pills tabselectroomBox d-flex align-items-center justify-content-between">
+                        <button class="btn-liveroomlevel nav-link active" data-bs-toggle="pill" data-bs-target="#liveroom_general">General</button>
+                        <button class="btn-liveroomlevel nav-link" data-bs-toggle="pill" data-bs-target="#liveroom_vip">VIP</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!--General-->
+                        <div class="tab-pane fade show active" id="liveroom_general">
+                            <div class="livelevelBox-general">
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl1</div>
+                                    <div class="liveGamenum">Ball_01</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl2</div>
+                                    <div class="liveGamenum">Ball_02</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl3</div>
+                                    <div class="liveGamenum">Ball_03</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl4</div>
+                                    <div class="liveGamenum">Ball_04</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl5</div>
+                                    <div class="liveGamenum">Ball_05</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-general.jpg" class="">
+                                    <div class="liveHostnum">Girl6</div>
+                                    <div class="liveGamenum">Ball_06</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--VIP-->
+                        <div class="tab-pane fade" id="liveroom_vip">
+                            <div class="livelevelBox-vip">
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                    <div class="liveHostnum">Girl1</div>
+                                    <div class="liveGamenum">Ball_01</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                    <div class="liveHostnum">Girl2</div>
+                                    <div class="liveGamenum">Ball_02</div>
+                                </div>
+                                <div class="liveroomBox">
+                                    <img src="./assets/img/MarbleRace/room-vip.jpg" class="">
+                                    <div class="liveHostnum">Girl3</div>
+                                    <div class="liveGamenum">Ball_03</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+        <!--chip amount modal-->
+        <div class="modal fade" id="chipamount_Modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="result-title mb-2">Chip Amount</div>
+                        <div class="manualamountBox d-flex align-items-center justify-content-between">
+                            <img src="./assets/img/MarbleRace/icon/chipamount.png">
+                            <input type="text" placeholder="1000">
+                        </div>
+                        <div class="text-end">Enter the bet amount</div>
+                        <div class="manualbtnBox d-flex align-items-center justify-content-between my-3">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--confirm bet modal-->
+        <div class="modal fade" id="confirmbet_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="result-title mb-2">Confirm Bet</div>
+                        <!-- ball option -->
+                        <div class="betoption-ballBox d-flex align-items-center justify-content-center my-4">
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball1.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball2.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball3.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">500</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball4.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball5.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball6.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball7.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball8.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball9.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball10.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- doubleside option -->
+                        <div class="betoption-doublesideBox d-flex align-items-center justify-content-between my-4">
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Big</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="betoption-doubleside two d-flex flex-column">
+                                <span class="bet-optionname">Small</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Odd</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-doubleside two d-flex flex-column">
+                                <span class="bet-optionname">Even</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="manualbtnBox d-flex align-items-center justify-content-between my-3">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--reprat modal-->
+        <div class="modal fade" id="repeat_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="result-title mb-2">Reprat Bet</div>
+                        <!-- ball option -->
+                        <div class="betoption-ballBox d-flex align-items-center justify-content-center my-4">
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball1.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball2.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball3.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">500</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball4.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball5.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball6.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball7.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="betoption-ball">
+                                <img src="./assets/img/MarbleRace/ball/ball8.png" class="ball-img">
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- doubleside option -->
+                        <div class="betoption-doublesideBox d-flex align-items-center justify-content-center my-4">
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Big</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="betoption-doubleside one d-flex flex-column">
+                                <span class="bet-optionname">Odd</span>
+                                <span class="bet-price">1:0.95</span>
+                                <div class="betchipBox">
+                                    <div class="chipimgBox">
+                                        <img src="./assets/img/MarbleRace/icon/chip.png" class="chip-img">
+                                        <span class="chip-amount">5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="manualbtnBox d-flex align-items-center justify-content-between my-3">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--bethistory modal-->
+        <div class="modal fade" id="bethistory_Modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./assets/img/MarbleRace/icon/bethistory.png">
+                        <span>Bet history</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="nav nav-pills d-flex align-items-center justify-content-between">
+                            <button class="btn-modaltab nav-link active" data-bs-toggle="pill" data-bs-target="#currentbet_tab" type="button">Current Bets</button>
+                            <button class="btn-modaltab nav-link" data-bs-toggle="pill" data-bs-target="#todaybet_tab" type="button">Today Bets</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="bethistory-tabcontent tab-pane fade show active" id="currentbet_tab">
+                                <table class="currentbet-table text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>NO.</th>
+                                            <th>Bet(Odd)</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="bluetext">Big</span></td>
+                                            <td>1,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="redtext">Small</span></td>
+                                            <td>2,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="bluetext">Odd</span></td>
+                                            <td>3,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="redtext">Even</span></td>
+                                            <td>4,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>6,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>7,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>8,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>9,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>11,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>12,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>13,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td>14,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="bethistory-tabcontent tab-pane fade" id="todaybet_tab">
+                                <table class="todaybet-table text-center"> 
+                                    <thead>
+                                        <tr>
+                                            <th>NO.</th>
+                                            <th>Bet(Odd)</th>
+                                            <th>Win/Lose</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="bluetext">Big</span></td>
+                                            <td><span class="redtext">LOSE</span></td>
+                                            <td>1,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="redtext">Small</span></td>
+                                            <td><span class="redtext">LOSE</span></td>
+                                            <td>2,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="bluetext">Odd</span></td>
+                                            <td><span class="redtext">LOSE</span></td>
+                                            <td>3,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td><span class="redtext">Even</span></td>
+                                            <td><span class="redtext">LOSE</span></td>
+                                            <td>4,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="redtext">LOSE</span></td>
+                                            <td>5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="redtext">LOSE</span></td>
+                                            <td>6,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="redtext">LOSE</span></td>
+                                            <td>7,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="bluetext">WIN</span></td>
+                                            <td>8,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="bluetext">WIN</span></td>
+                                            <td>9,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="bluetext">WIN</span></td>
+                                            <td>10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="bluetext">WIN</span></td>
+                                            <td>11,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="bluetext">WIN</span></td>
+                                            <td>12,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="bluetext">WIN</span></td>
+                                            <td>13,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>202501017777777</td>
+                                            <td>
+                                                <span>
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </span>
+                                            </td>
+                                            <td><span class="bluetext">WIN</span></td>
+                                            <td>14,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--record modal-->
+        <div class="modal fade" id="record_Modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./assets/img/MarbleRace/icon/record.png">
+                        <span>Record</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="nav nav-pills d-flex align-items-center justify-content-between">
+                            <button class="btn-modaltab nav-link active" data-bs-toggle="pill" data-bs-target="#history_tab" type="button">History</button>
+                            <button class="btn-modaltab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_tab" type="button">Statistics</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="record-tabcontent tab-pane fade show active" id="history_tab">
+                                <table class="history-table text-center">
+                                    <thead>
+                                        <tr>
+                                            <th><img src="./assets/img/MarbleRace/icon/playrecordvideo.png" class="playrecordimg"></th>
+                                            <th><img src="./assets/img/MarbleRace/icon/playrecordimg.png" class="playrecordimg"></th>
+                                            <th>NO.</th>
+                                            <th>Record</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordvideo.png" class="playrecordimg"></td>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordimg.png" class="playrecordimg"></td>
+                                            <td>1234567</td>
+                                            <td>
+                                                <div class="historyballBox">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordvideo.png" class="playrecordimg"></td>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordimg.png" class="playrecordimg"></td>
+                                            <td>7654321</td>
+                                            <td>
+                                                <div class="historyballBox">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordvideo.png" class="playrecordimg"></td>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordimg.png" class="playrecordimg"></td>
+                                            <td>0000000</td>
+                                            <td>
+                                                <div class="historyballBox">
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordvideo.png" class="playrecordimg"></td>
+                                            <td><img src="./assets/img/MarbleRace/icon/playrecordimg.png" class="playrecordimg"></td>
+                                            <td>7777777</td>
+                                            <td>
+                                                <div class="historyballBox">
+                                                    <img src="./assets/img/MarbleRace/ball/ball1.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball2.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball3.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball4.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball5.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball6.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball7.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball8.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball9.png" class="ballimg">
+                                                    <img src="./assets/img/MarbleRace/ball/ball10.png" class="ballimg">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="record-tabcontent tab-pane fade" id="statistics_tab">
+                                <div class="statistics-doublesideBox d-flex align-items-center justify-content-between">
+                                    <div class="statisticsdoublesideBox">
+                                        <span class="statisticsdoubleside-one">B</span>
+                                        <span class="statisticsdoubleside-num">10</span>
+                                    </div>
+                                    <div class="statisticsdoublesideBox">
+                                        <span class="statisticsdoubleside-two">S</span>
+                                        <span class="statisticsdoubleside-num">20</span>
+                                    </div>
+                                    <div class="statisticsdoublesideBox">
+                                        <span class="statisticsdoubleside-one">O</span>
+                                        <span class="statisticsdoubleside-num">30</span>
+                                    </div>
+                                    <div class="statisticsdoublesideBox">
+                                        <span class="statisticsdoubleside-two">E</span>
+                                        <span class="statisticsdoubleside-num">40</span>
+                                    </div>
+                                </div>
+                                <div class="nav nav-pills d-flex align-items-center justify-content-between my-1 px-3">
+                                    <button class="btn-ballnumtab nav-link active" data-bs-toggle="pill" data-bs-target="#statistics_ballone"><img src="./assets/img/MarbleRace/ball/ball1.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_balltwo"><img src="./assets/img/MarbleRace/ball/ball2.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_ballthree"><img src="./assets/img/MarbleRace/ball/ball3.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_ballfour"><img src="./assets/img/MarbleRace/ball/ball4.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_ballfive"><img src="./assets/img/MarbleRace/ball/ball5.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_ballsix"><img src="./assets/img/MarbleRace/ball/ball6.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_ballseven"><img src="./assets/img/MarbleRace/ball/ball7.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_balleight"><img src="./assets/img/MarbleRace/ball/ball8.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_ballnine"><img src="./assets/img/MarbleRace/ball/ball9.png"></button>
+                                    <button class="btn-ballnumtab nav-link" data-bs-toggle="pill" data-bs-target="#statistics_ballten"><img src="./assets/img/MarbleRace/ball/ball10.png"></button>
+                                </div>
+                                <div class="tab-content my-2">
+                                    <div class="ballstatistics-tabcontent tab-pane fade show active" id="statistics_ballone">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:10%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:40%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:60%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:80%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:100%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_balltwo">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:75%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:75%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_ballthree">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:90%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:80%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:70%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:60%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_ballfour">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:25%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:21%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:25%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:23%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:25%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_ballfive">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:10%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:40%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:60%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:80%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:100%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_ballsix">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:75%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:75%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_ballseven">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:25%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:21%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:25%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:23%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:25%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_balleight">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:54%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:78%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:69%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:33%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:21%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_ballnine">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:90%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:80%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:70%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:60%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:50%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ballstatistics-tabcontent tab-pane fade" id="statistics_ballten">
+                                        <div class="barchartBox">
+                                            <div class="statisticschart-barBox">
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:10%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:40%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:60%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:80%;"></div>
+                                                </div>
+                                                <div class="barstripBox">
+                                                    <div class="barstrip" style="height:98%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticschart-rank">
+                                                <div class="ranktrends">
+                                                    <span>1st</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>2nd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>3rd</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>4th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/down.png"></span>
+                                                </div>
+                                                <div class="ranktrends">
+                                                    <span>5th</span>
+                                                    <span><img src="./assets/img/MarbleRace/icon/up.png"></span>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--setting modal-->
+        <div class="modal fade" id="setting_Modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./assets/img/MarbleRace/icon/setting.png">
+                        <span>Setting</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="switch-item d-flex align-items-center justify-content-between">
+                            <span>Anchor Voice</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="switch-item d-flex align-items-center justify-content-between">
+                            <span>Effects Voice</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="switch-item d-flex align-items-center justify-content-between">
+                            <span>Winning Voice</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--win modal-->
+        <div class="modal fade" id="win_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="result-title mb-2">Congratulations!</div>
+                        <div class="winamountBox">
+                            <div class="winamount-text">Win</div>
+                            <div class="winamount-amount">999,999.00</div>
+                        </div>
+                        <div class="manualbtnBox my-3">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="goldcoinBox">
+                <img src="./assets/img/MarbleRace/gif/gold.gif">
+            </div>
+        </div>
+
+        <!--redenvelope modal-->
+        <div class="modal fade" id="redenvelope_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <span>Tips</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="redenvelopeamountBox">
+                            <div class="redenvelopeamount d-flex align-items-center">
+                                <img src="./assets/img/MarbleRace/icon/redenvelope.png">
+                                <input type="text" placeholder="000,000">
+                            </div>
+                            <span class="redenvelopenote">Send a tip</span>
+                        </div>
+                        <div class="manualbtnBox my-3">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-bs-dismiss="modal">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--present modal-->
+        <div class="modal fade" id="present_Modal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content result-modal">
+                    <div class="modal-header">
+                        <span>Gift</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+
+                        <div class="presenttypeBox">
+                            <div class="present-option" data-bs-dismiss="modal">
+                                <div class="presentimg">
+                                    <img src="./assets/img/MarbleRace/icon/rocket.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Rocket</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option" data-bs-dismiss="modal">
+                                <div class="presentimg">
+                                    <img src="./assets/img/MarbleRace/icon/flower.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Flower</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option" data-bs-dismiss="modal">
+                                <div class="presentimg">
+                                    <img src="./assets/img/MarbleRace/icon/diamond.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Diamond</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option" data-bs-dismiss="modal">
+                                <div class="presentimg">
+                                    <img src="./assets/img/MarbleRace/icon/snowball.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Snowball</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                            <div class="present-option" data-bs-dismiss="modal">
+                                <div class="presentimg">
+                                    <img src="./assets/img/MarbleRace/icon/lollipop.png" class="presentobject">
+                                </div>
+                                <div class="presenttext">
+                                    <div class="presentname">Lollipop</div>
+                                    <div class="presentprice">000,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="manualbtnBox my-3 mt-5">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nocolor-overlay" style="display: none;">
+            <div class="presentpopupBox">
+                <img src="./assets/img/MarbleRace/gif/ribbons.gif" class="ribbonsgif">
+                <div class="presentgif">
+                    <img src="./assets/img/MarbleRace/gif/rocket.gif" style="display: none;">
+                    <img src="./assets/img/MarbleRace/gif/flower.gif">
+                    <img src="./assets/img/MarbleRace/gif/diamond.gif" style="display: none;">
+                    <img src="./assets/img/MarbleRace/gif/snowball.gif" style="display: none;">
+                    <img src="./assets/img/MarbleRace/gif/lollipop.gif" style="display: none;">
+                </div>
+            </div>
+        </div>
+
+        <!-- rotate warning -->
+        <div class="rotatewarning-popup">
+            <div class="">
+                <img src="./assets/img/MarbleRace/icon/rotate.png">
+            </div>
+        </div>
+
+
+    </body>
+</html>
