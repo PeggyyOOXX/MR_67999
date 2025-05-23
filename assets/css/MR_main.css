@@ -116,7 +116,7 @@ img {width: 100%;}
     align-items: flex-start;
     margin-top: 45px;
     z-index: 1;
-    background: url(../img/MarbleRace/bg/fuzzyBG.png) no-repeat;
+    background: url(../img/MarbleRace/bg/fuzzyBG.png?mm) no-repeat;
     background-size: cover;
 }
 .videomain video {
@@ -219,6 +219,26 @@ img {width: 100%;}
     width: 300px;
     white-space:nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
+}
+.championresult-ballnum {
+  display: inline-block;
+  font-weight: bold;
+  color: #FFD700;
+  padding-left: 4px;
+  animation: championFlash 2s infinite;
+}
+@keyframes championFlash {
+  0%, 100% {
+    transform: scale(.8);
+    text-shadow: 0 0 5px #fff9, 0 0 10px #fd09;
+    color: #fff;
+  }
+  40%, 60% {
+    transform: scale(1.5);
+    text-shadow: 0 0 3px #fff5, 0 0 5px #ff05;
+    color: #ff0;
+  }
 }
 .btn-showhidebetarea{
     padding: 0;
@@ -284,6 +304,25 @@ img {width: 100%;}
     font-weight: 800;
     color: #000;
     text-shadow: 0 0 3px #fff, 0 0 5px #fff;
+}
+.championresult-ballnum {
+  display: inline-block;
+  font-weight: bold;
+  color: #FFD700;
+  padding-left: 4px;
+  animation: championFlash 2s infinite;
+}
+@keyframes championFlash {
+  0%, 100% {
+    transform: scale(.8);
+    text-shadow: 0 0 5px #fff9, 0 0 10px #fd09;
+    color: #fd0;
+  }
+  40%, 60% {
+    transform: scale(1.5);
+    text-shadow: 0 0 3px #fff5, 0 0 5px #ff05;
+    color: #ff0;
+  }
 }
 /*--- Doubleside Bet ---*/
 .betarea-doublesideBox {
@@ -541,6 +580,42 @@ img {width: 100%;}
     background: linear-gradient(180deg, #FF006F 31.25%, #66002D 100%),
     radial-gradient(48.46% 60.95% at 51.54% 96.43%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 85%);
 }
+/*--- countdown timer ---*/
+.countdown-timer {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+.countdown-ring {
+  transform: rotate(-90deg);
+}
+.countdown-bg {
+  fill: none;
+  stroke: #fff6;
+  stroke-width: 4;
+}
+.countdown-circle {
+  fill: none;
+  stroke: #00d419;
+  stroke-width: 4;
+  stroke-dasharray: 88; /* 2 * π * r = 2 * π * 25 ≈ 157 */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+.countdown-timer.warning .countdown-circle {
+  stroke: #ff1e29;
+}
+.countdown-timer.warning .countdown-text {
+  color: #ff1e29;
+  font-weight: 700;
+  text-shadow: 0 0 2px #fff, 1px 1px 5px #fff9, -1px 1px 5px #fff9, 1px -1px 5px #fff9, -1px -1px 5px #fff9;
+}
+.countdown-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /*--- modal ---*/
 .modal-backdrop.show{
     opacity: 1;
@@ -548,7 +623,7 @@ img {width: 100%;}
     background-color: rgba(0, 0, 0, 0.5);
 }
 .modal .btn-close {
-    filter: invert(1) grayscale(100%) brightness(200%);;
+    filter: invert(1) grayscale(100%) brightness(200%);
     color: #fff;
     opacity: 1;
 }
@@ -649,7 +724,7 @@ img {width: 100%;}
     border-radius: 4px;
 }
 .history-table th{
-    padding: 5px;
+    padding: 5px 0;
 }
 .history-table td{
     border-bottom: 1px solid rgba(188, 190, 196, 0.1);
@@ -671,6 +746,7 @@ img {width: 100%;}
     border: 1px solid rgba(238, 238, 238, 0.5);
     border-radius: 8px;
     padding: 8px;
+    margin-bottom: 4px;
 }
 .statisticsdoubleside-total{
     color: rgba(255, 189, 66, 1);
@@ -1123,9 +1199,12 @@ img {width: 100%;}
 .live-replay{
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
     width: 100%;
     z-index: 99999;
+    max-width: 500px;
+    max-height: 300px;
+    transform: translate(-50%, -40%);
 }
 .live-replay .btn-close{
     position: absolute;
