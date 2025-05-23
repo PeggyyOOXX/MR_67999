@@ -104,6 +104,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    // 倒計時動畫
+    let duration = 60;
+    let timeLeft = duration;
+    const circle = document.querySelector('.countdown-circle');
+    const text = document.querySelector('.countdown-text');
+    const radius = 14;
+    const circumference = 2 * Math.PI * radius;
+    circle.style.strokeDasharray = circumference;
+
+    function updateCountdown() {
+        const offset = circumference * (1 - timeLeft / duration);
+        circle.style.strokeDashoffset = offset;
+        text.textContent = timeLeft;
+        const timer = document.querySelector('.countdown-timer');   // 紅色警告樣式
+        if (timeLeft <= 10) {
+            timer.classList.add('warning');
+        } else {
+            timer.classList.remove('warning');
+        }
+
+        if (timeLeft > 0) {
+            timeLeft--;
+            setTimeout(updateCountdown, 1000);
+        }
+    }
+    updateCountdown();
+
     // 根據主畫面內容和設備方向更新介面
     function updateInterfaceBasedOnMainContent() {
         const hasLiveAnchor = videoMain.querySelector('.live-anchor') !== null;
